@@ -1,0 +1,84 @@
+<html>
+     <head> 
+	      <title> </title>
+		  
+		  		 <script>
+		 
+           function displayscore()
+		   {
+            
+					    var obj ;
+			if(window.XMLHttpRequest)
+		      {
+			  
+			     obj = new XMLHttpRequest();
+				 
+			  
+			  }
+			  else
+			  {
+			  
+			    obj = new ActiveXObject("Microsoft.XMLHTTP");
+			  
+			  }
+			 obj.onreadystatechange =function() 
+			 {
+			 
+			   if(obj.readyState==4 && obj.status==200)
+			   {
+			      document.getElementById("score").innerHTML=obj.responseText;
+			    
+			   }
+			 
+			 }
+		  
+		    obj.open("GET","score.txt",true);
+			obj.send();
+	   
+		   
+			}
+			
+			setInterval(displayscore,3000);
+			
+			
+		 
+	     </script>
+		  
+		  
+	 </head>
+	 <body>
+	     
+
+		 
+		 
+		 
+		 
+		 
+		 
+		 <h1>score</h1>
+		 <div id="score" >
+		 
+		 
+		 
+		 </div>
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+	 </body>
+	
+</html>

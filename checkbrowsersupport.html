@@ -1,0 +1,28 @@
+<html>
+     <head>
+	       <title>Home</title>
+	 </head>
+	       <body>
+		   <script>
+                     var obj;
+                       if(window.XMLHttpRequest)
+                        {
+
+						  obj = new XMLHttpRequest;
+
+                        }
+                        else
+                         {
+
+                             obj = new ActiveXObject("Microsoft.XMLHTTP");
+						 
+						 
+                         }		
+                      obj.open("GET","score.txt",true);
+                      obj.send();					  
+
+			
+			
+		    </script>
+		   </body>
+</html>
